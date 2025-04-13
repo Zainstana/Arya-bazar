@@ -1,0 +1,97 @@
+inital commit
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# interactive rebase in progress; onto 05ce21f
+# Last command done (1 command done):
+#    pick 867f48d inital commit
+# No commands remaining.
+# You are currently rebasing branch 'main' on '05ce21f'.
+#
+# Changes to be committed:
+#	new file:   .editorconfig
+#	new file:   .env.example
+#	new file:   .gitattributes
+#	modified:   .gitignore
+#	modified:   README.md
+#	new file:   app/Livewire/Frontend/Home.php
+#	new file:   app/Providers/AppServiceProvider.php
+#	new file:   app/Providers/VoltServiceProvider.php
+#	new file:   app/View/Components/AppLayout.php
+#	new file:   app/View/Components/GuestLayout.php
+#	new file:   artisan
+#	new file:   bootstrap/app.php
+#	new file:   bootstrap/cache/.gitignore
+#	new file:   bootstrap/providers.php
+#	new file:   composer.json
+#	new file:   composer.lock
+#	new file:   config/app.php
+#	new file:   config/auth.php
+#	new file:   config/cache.php
+#	new file:   config/database.php
+#	new file:   config/filesystems.php
+#	new file:   config/livewire.php
+#	new file:   config/logging.php
+#	new file:   config/mail.php
+#	new file:   config/permission.php
+#	new file:   config/queue.php
+#	new file:   config/services.php
+#	new file:   config/session.php
+#	new file:   database/.gitignore
+#	new file:   database/factories/UserFactory.php
+#	new file:   database/migrations/0001_01_01_000000_create_users_table.php
+#	new file:   database/migrations/0001_01_01_000001_create_cache_table.php
+#	new file:   database/migrations/0001_01_01_000002_create_jobs_table.php
+#	new file:   database/migrations/2025_03_12_073249_create_permission_tables.php
+#	new file:   database/migrations/2025_03_12_075430_create_categories_table.php
+#	new file:   database/migrations/2025_03_12_075437_create_products_table.php
+#	new file:   database/migrations/2025_03_12_075442_create_carts_table.php
+#	new file:   database/migrations/2025_03_12_075447_create_orders_table.php
+#	new file:   database/migrations/2025_03_12_075452_create_order_items_table.php
+#	new file:   database/migrations/2025_03_12_075456_create_payments_table.php
+#	new file:   database/migrations/2025_03_12_075508_create_reviews_table.php
+#	new file:   database/seeders/DatabaseSeeder.php
+#	new file:   package-lock.json
+#	new file:   package.json
+#	new file:   phpunit.xml
+#	new file:   postcss.config.js
+#	new file:   public/.htaccess
+#	new file:   public/assets/frontend/css/main.css
+#	new file:   public/assets/frontend/js/main.js
+#	new file:   public/favicon.ico
+#	new file:   public/index.php
+#	new file:   public/robots.txt
+#	new file:   resources/css/app.css
+#	new file:   resources/js/app.js
+#	new file:   resources/js/bootstrap.js
+#	new file:   resources/views/layouts/app.blade.php
+#	new file:   resources/views/layouts/dashboard.blade.php
+#	new file:   resources/views/livewire/frontend/home.blade.php
+#	new file:   routes/auth.php
+#	new file:   routes/console.php
+#	new file:   routes/web.php
+#	new file:   storage/app/.gitignore
+#	new file:   storage/app/private/.gitignore
+#	new file:   storage/app/public/.gitignore
+#	new file:   storage/framework/.gitignore
+#	new file:   storage/framework/cache/.gitignore
+#	new file:   storage/framework/cache/data/.gitignore
+#	new file:   storage/framework/sessions/.gitignore
+#	new file:   storage/framework/testing/.gitignore
+#	new file:   storage/framework/views/.gitignore
+#	new file:   storage/logs/.gitignore
+#	new file:   tailwind.config.js
+#	new file:   tests/Feature/Auth/AuthenticationTest.php
+#	new file:   tests/Feature/Auth/EmailVerificationTest.php
+#	new file:   tests/Feature/Auth/PasswordConfirmationTest.php
+#	new file:   tests/Feature/Auth/PasswordResetTest.php
+#	new file:   tests/Feature/Auth/PasswordUpdateTest.php
+#	new file:   tests/Feature/Auth/RegistrationTest.php
+#	new file:   tests/Feature/ExampleTest.php
+#	new file:   tests/Feature/ProfileTest.php
+#	new file:   tests/Pest.php
+#	new file:   tests/TestCase.php
+#	new file:   tests/Unit/ExampleTest.php
+#	new file:   vite.config.js
+#

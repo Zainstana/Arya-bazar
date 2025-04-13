@@ -84,7 +84,7 @@
                     <div class="p-3">
                         <p class="my-2">
                             <strong class="text-lg font-bold dark:text-white">Specify your location</strong>
-                            Shipping options and fees vary based on your location.
+                            Shipping options and fees vary based on your location and positions.
                         </p>
                         <button type="button"
                             class="w-full text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center justify-center dark:focus:ring-[#3b5998]/55 me-2 mb-2">
