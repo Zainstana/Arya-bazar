@@ -1,0 +1,3 @@
+
+/* ایجاد یک متغیر سفارشی برای حالت تاریک */
+@custom-variant dark (&:where(.dark, .dark *));
