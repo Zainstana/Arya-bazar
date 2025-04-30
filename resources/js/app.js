@@ -1,5 +1,9 @@
 import './bootstrap';
 import 'flowbite';
+import 'swiper/css/bundle';
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
 
 
 import jQuery from 'jquery';
