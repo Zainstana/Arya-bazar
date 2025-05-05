@@ -1,10 +1,5 @@
 @push('styles')
     <style>
-        [dir="rtl"] ul {
-            margin-left: 0 !important;
-            margin-right: 32px !important;
-        }
-
         button {
             margin: 0 !important;
         }
@@ -12,7 +7,7 @@
         swiper-container {
             width: 100%;
             height: 100%;
-            background: #000;
+            background: #4d4c4c;
         }
 
         swiper-slide {
@@ -47,6 +42,24 @@
             font-size: 14px;
             max-width: 400px;
             line-height: 1.3;
+        }
+
+        {{--  slider 4  --}} .swiper4 swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper4swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .swiper4 swiper-slide img {
+            display: block;
+            width: 100%;
         }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -449,7 +462,7 @@
     </div>
 
     <swiper-container style="--swiper-navigation-color: #1d4ed8; --swiper-pagination-color: #1d4ed8;  height: 500px;"
-        class="mySwiper z-20" speed="600" parallax="true" pagination="true" pagination-clickable="true"
+        class="mySwiper swiper1 z-20" speed="600" parallax="true" pagination="true" pagination-clickable="true"
         navigation="false" {{--  autoplay="false" autoplay-delay="false"       --}} loop="false">
         <!-- Parallax Background -->
         <div slot="container-start" class="parallax-bg absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -511,7 +524,7 @@
     <div class="bg-gray-100 dark:bg-gray-900 relative z-20 px-9 py-2 ">
         <div class="mt-[-200px] grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 ">
             <div
-                class=" bg-white  dark:bg-gray-800  h-auto  shadow-lg dark:shadow-none dark:border dark:border-slate-600 rounded shadow-slate-500  p-2">
+                class=" bg-white  dark:bg-gray-800  h-auto  shadow dark:shadow-none dark:border dark:border-slate-700 rounded  p-2">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg"
@@ -564,7 +577,7 @@
                 </div>
             </div>
             <div
-                class=" bg-white  dark:bg-gray-800  h-auto  shadow-lg dark:shadow-none dark:border dark:border-slate-600 rounded shadow-slate-500  p-2">
+                class=" bg-white  dark:bg-gray-800  h-auto  shadow dark:shadow-none dark:border dark:border-slate-700 rounded  p-2">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg"
@@ -617,7 +630,7 @@
                 </div>
             </div>
             <div
-                class=" bg-white  dark:bg-gray-800  h-auto  shadow-lg dark:shadow-none dark:border dark:border-slate-600 rounded shadow-slate-500  p-2">
+                class=" bg-white  dark:bg-gray-800  h-auto  shadow dark:shadow-none dark:border dark:border-slate-700 rounded   p-2">
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg"
@@ -659,7 +672,7 @@
 
             </div>
             <div
-                class=" bg-white  dark:bg-gray-800  h-auto  shadow-lg dark:shadow-none dark:border dark:border-slate-600 rounded shadow-slate-500  p-2">
+                class=" bg-white  dark:bg-gray-800  h-auto  shadow dark:shadow-none dark:border dark:border-slate-700 rounded   p-2">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-1">
                     <div class="grid gap-5">
                         <div>
@@ -717,21 +730,1167 @@
             </div>
         </div>
     </div>
-    <div class=" px-9 py-2 text-black dark:text-white   bg-gray-100 dark:bg-gray-900">
-        <swiper-container
-            class="mySwiper  text-black dark:text-white bg-white  dark:bg-gray-800 shadow-lg dark:shadow-none dark:border dark:border-slate-600 rounded shadow-slate-500"
-            slides-per-view="5" space-between="30" free-mode="true">
-            <swiper-slide class="text-black dark:text-white">Slide 1</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 2</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 3</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 4</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 5</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 6</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 7</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 8</swiper-slide>
-            <swiper-slide class="text-black dark:text-white">Slide 9</swiper-slide>
-        </swiper-container>
+
+    <div class=" px-9 py-2 text-black dark:text-white bg-gray-100 dark:bg-gray-900">
+        <div
+            class="text-black dark:text-white bg-white dark:bg-gray-800 shadow-sm dark:shadow-none dark:border dark:border-slate-700 rounded">
+
+
+            <div class="p-2 text-2xl font-semibold text-bold">Shop By Category</div>
+            <hr class="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-900">
+            <swiper-container class="mySwiper swiper2 bg-transparent" space-between="10" free-mode="true"
+                breakpoints='{
+        "320": { "slidesPerView": 2 },
+        "640": { "slidesPerView": 3 },
+        "768": { "slidesPerView": 5 },
+        "1024": { "slidesPerView": 7 },
+        "1280": { "slidesPerView": 10 }
+    }'>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">🍗</div>
+                    <small class="mt-1 text-xs">مواد غذایی</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">👗</div>
+                    <small class="mt-1 text-xs">پوشاک</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">📱</div>
+                    <small class="mt-1 text-xs">موبایل و لوازم</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">🏠</div>
+                    <small class="mt-1 text-xs">لوازم خانگی</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">💻</div>
+                    <small class="mt-1 text-xs">الکترونیکی</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">📚</div>
+                    <small class="mt-1 text-xs">کتاب و تحریر</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">🧸</div>
+                    <small class="mt-1 text-xs">اسباب بازی</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">👟</div>
+                    <small class="mt-1 text-xs">کفش و بوت</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">💄</div>
+                    <small class="mt-1 text-xs">آرایشی</small>
+                </swiper-slide>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+                    <div class="text-3xl">🛠</div>
+                    <small class="mt-1 text-xs">ابزار</small>
+                </swiper-slide>
+
+            </swiper-container>
+
+            <hr class="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-900">
+            <div class="p-0 m-0 pb-2 ">
+                <swiper-container class="mySwiper swiper-tags p-0 m-0 bg-transparent" space-between="1"
+                    free-mode="true"
+                    breakpoints='{
+                        "320": { "slidesPerView": 3 },
+                        "640": { "slidesPerView": 4 },
+                        "768": { "slidesPerView": 6 },
+                        "1024": { "slidesPerView": 8 },
+                        "1280": { "slidesPerView": 10 }
+                    }'>
+
+                    <swiper-slide
+                        class="p-0 m-0 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 text-xs px-3 py-1 rounded-full text-center">
+                        #آیفون
+                    </swiper-slide>
+
+                    <swiper-slide
+                        class="p-0 m-0 bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200 text-xs px-3 py-1 rounded-full text-center">
+                        #کفش_ورزشی
+                    </swiper-slide>
+
+                    <swiper-slide
+                        class="p-0 m-0 bg-pink-100 text-pink-700 dark:bg-pink-900 dark:text-pink-200 text-xs px-3 py-1 rounded-full text-center">
+                        #رژلب
+                    </swiper-slide>
+
+                    <!-- ادامه تگ‌ها... -->
+
+                </swiper-container>
+            </div>
+
+
+        </div>
     </div>
+
+    <div class=" px-9 py-2 text-black dark:text-white bg-gray-100 dark:bg-gray-900">
+        <div
+            class="text-black dark:text-white bg-white dark:bg-gray-800 shadow-sm dark:shadow-none dark:border dark:border-slate-700 rounded">
+            <div class="p-2 text-2xl font-semibold text-bold">Most Viewed</div>
+            <hr class="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-900">
+            <swiper-container class="mySwiper swiper2 bg-transparent" space-between="10" free-mode="true"
+                breakpoints='{
+                            "320": { "slidesPerView": 2 },
+                            "640": { "slidesPerView": 2 },
+                            "768": { "slidesPerView": 3 },
+                            "1024": { "slidesPerView": 6 },
+                            "1280": { "slidesPerView": 6 }
+                            }'>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+
+
+            </swiper-container>
+
+
+        </div>
+    </div>
+    <div class=" px-9 py-2 text-black dark:text-white bg-gray-100 dark:bg-gray-900">
+        <div
+            class="p-2 grid grid-cols-2 gap-2 text-black dark:text-white bg-white dark:bg-gray-800 shadow-sm dark:shadow-none dark:border dark:border-slate-700 rounded">
+            <div
+                class="flex flex-col md:flex-row md:gap-6 w-full bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+
+                <!-- اسلایدر مربع شکل -->
+                <div class="w-full md:w-auto flex justify-center items-center p-4">
+                    <swiper-container class="mySwiper w-[200px] h-[200px] bg-transparent" effect="cards"
+                        grab-cursor="true">
+                        <swiper-slide class="rounded bg-red-900 text-white flex items-center justify-center">Slide
+                            1</swiper-slide>
+                        <swiper-slide class="rounded bg-green-600 text-white flex items-center justify-center">Slide
+                            2</swiper-slide>
+                        <swiper-slide class="rounded bg-yellow-600 text-white flex items-center justify-center">Slide
+                            3</swiper-slide>
+                    </swiper-container>
+                </div>
+
+                <!-- متن -->
+                <div class="flex flex-col justify-between p-4 flex-grow">
+                    <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">کالا یا دسته‌بندی خاص</h5>
+                    <p class="text-sm text-gray-700 dark:text-gray-400">توضیح مختصر درباره این مورد پرفروش که توجه
+                        زیادی به خود جلب کرده است.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row md:gap-6 w-full bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+
+                <!-- اسلایدر مربع شکل -->
+                <div class="w-full md:w-auto flex justify-center items-center p-4">
+                    <swiper-container class="mySwiper w-[200px] h-[200px] bg-transparent" effect="cards"
+                        grab-cursor="true">
+                        <swiper-slide class="rounded bg-red-900 text-white flex items-center justify-center">Slide
+                            1</swiper-slide>
+                        <swiper-slide class="rounded bg-green-600 text-white flex items-center justify-center">Slide
+                            2</swiper-slide>
+                        <swiper-slide class="rounded bg-yellow-600 text-white flex items-center justify-center">Slide
+                            3</swiper-slide>
+                    </swiper-container>
+                </div>
+
+                <!-- متن -->
+                <div class="flex flex-col justify-between p-4 flex-grow text-center">
+                    <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">کالا یا دسته‌بندی خاص</h5>
+                    <p class="text-sm text-gray-700 dark:text-gray-400">توضیح مختصر درباره این مورد پرفروش که توجه
+                        زیادی به خود جلب کرده است.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class=" px-9 py-2 text-black dark:text-white bg-gray-100 dark:bg-gray-900">
+        <div
+            class="text-black dark:text-white bg-white dark:bg-gray-800 shadow-sm dark:shadow-none dark:border dark:border-slate-700 rounded">
+            <div class="p-2 text-2xl font-semibold text-bold">Most Viewed</div>
+            <hr class="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-900">
+            <swiper-container class="mySwiper swiper2 bg-transparent" space-between="10" free-mode="true"
+                breakpoints='{
+    "320": { "slidesPerView": 2 },
+    "640": { "slidesPerView": 2 },
+    "768": { "slidesPerView": 3 },
+    "1024": { "slidesPerView": 4 },
+    "1280": { "slidesPerView": 6 }
+}'>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://flowbite.com/docs/images/products/apple-watch.png" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                        </div>
+                    </div>
+                </swiper-slide>
+
+
+            </swiper-container>
+
+
+        </div>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-900 relative z-20 px-9 py-2 ">
+        <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 ">
+            <div
+                class="bg-white  dark:bg-gray-800  shadow dark:shadow-none dark:border dark:border-slate-700 rounded  p-2">
+                <div class="p-2 text-2xl  font-serif">Shop By Category</div>
+
+                <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+                        <div class="title font-serif text-sm">title one</div>
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" px-9 py-2 text-black dark:text-white bg-gray-100 dark:bg-gray-900">
+        <div
+            class="text-black dark:text-white bg-white dark:bg-gray-800 shadow-sm dark:shadow-none dark:border dark:border-slate-700 rounded">
+            <div class="p-2 text-2xl font-semibold text-bold">Most Viewed</div>
+            <hr class="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-900">
+            <swiper-container class="mySwiper swiper2 bg-transparent" space-between="10" free-mode="true"
+                breakpoints='{
+                            "320": { "slidesPerView": 2 },
+                            "640": { "slidesPerView": 2 },
+                            "768": { "slidesPerView": 3 },
+                            "1024": { "slidesPerView": 4 },
+                            "1280": { "slidesPerView": 5 }
+                            }'>
+
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <a href="#" class="overflow-hidden rounded">
+                            <img class="mx-auto h-44 w-44 dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg"
+                                alt="imac image" />
+                            <img class="mx-auto hidden h-44 w-44 dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg"
+                                alt="imac image" />
+                        </a>
+                        <div>
+                            <a href="#"
+                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">iMac
+                                27”</a>
+                            <p class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400">This generation has
+                                some
+                                improvements, including a longer continuous battery life.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white">
+                                <span class="line-through"> $399,99 </span>
+                            </p>
+                            <p class="text-lg font-bold leading-tight text-red-600 dark:text-red-500">$299</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2.5">
+                            <button data-tooltip-target="favourites-tooltip-1" type="button"
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+                                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="favourites-tooltip-1" role="tooltip"
+                                class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                                Add to favourites
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                            <button type="button"
+                                class="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium  text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-700">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <a href="#" class="overflow-hidden rounded">
+                            <img class="mx-auto h-44 w-44 dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-light.svg"
+                                alt="imac image" />
+                            <img class="mx-auto hidden h-44 w-44 dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-dark.svg"
+                                alt="imac image" />
+                        </a>
+                        <div>
+                            <a href="#"
+                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Playstation
+                                5</a>
+                            <p class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400">This generation has
+                                some
+                                improvements, including a longer continuous battery life.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white">
+                                <span class="line-through"> $799,99 </span>
+                            </p>
+                            <p class="text-lg font-bold leading-tight text-red-600 dark:text-red-500">$499</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2.5">
+                            <button data-tooltip-target="favourites-tooltip-2" type="button"
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+                                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="favourites-tooltip-2" role="tooltip"
+                                class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                                Add to favourites
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                            <button type="button"
+                                class="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium  text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-700">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <a href="#" class="overflow-hidden rounded">
+                            <img class="mx-auto h-44 w-44 dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg"
+                                alt="imac image" />
+                            <img class="mx-auto hidden h-44 w-44 dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg"
+                                alt="imac image" />
+                        </a>
+                        <div>
+                            <a href="#"
+                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Apple
+                                Watch Series 8</a>
+                            <p class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400">This generation has
+                                some
+                                improvements, including a longer continuous battery life.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white">
+                                <span class="line-through"> $1799,99 </span>
+                            </p>
+                            <p class="text-lg font-bold leading-tight text-red-600 dark:text-red-500">$1199</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2.5">
+                            <button data-tooltip-target="favourites-tooltip-3" type="button"
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+                                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="favourites-tooltip-3" role="tooltip"
+                                class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                                Add to favourites
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <button type="button"
+                                class="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium  text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-700">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <a href="#" class="overflow-hidden rounded">
+                            <img class="mx-auto h-44 w-44 dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg"
+                                alt="imac image" />
+                            <img class="mx-auto hidden h-44 w-44 dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg"
+                                alt="imac image" />
+                        </a>
+                        <div>
+                            <a href="#"
+                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Apple
+                                Watch Series 8</a>
+                            <p class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400">This generation has
+                                some
+                                improvements, including a longer continuous battery life.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white">
+                                <span class="line-through"> $1799,99 </span>
+                            </p>
+                            <p class="text-lg font-bold leading-tight text-red-600 dark:text-red-500">$1199</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2.5">
+                            <button data-tooltip-target="favourites-tooltip-3" type="button"
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+                                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="favourites-tooltip-3" role="tooltip"
+                                class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                                Add to favourites
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <button type="button"
+                                class="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium  text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-700">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <a href="#" class="overflow-hidden rounded">
+                            <img class="mx-auto h-44 w-44 dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg"
+                                alt="imac image" />
+                            <img class="mx-auto hidden h-44 w-44 dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg"
+                                alt="imac image" />
+                        </a>
+                        <div>
+                            <a href="#"
+                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Apple
+                                Watch Series 8</a>
+                            <p class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400">This generation has
+                                some
+                                improvements, including a longer continuous battery life.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white">
+                                <span class="line-through"> $1799,99 </span>
+                            </p>
+                            <p class="text-lg font-bold leading-tight text-red-600 dark:text-red-500">$1199</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2.5">
+                            <button data-tooltip-target="favourites-tooltip-3" type="button"
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+                                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="favourites-tooltip-3" role="tooltip"
+                                class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                                Add to favourites
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <button type="button"
+                                class="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium  text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-700">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                    class="flex flex-col items-center text-gray-800 dark:text-white bg-white dark:bg-gray-800 p-2 rounded">
+
+
+                    <div
+                        class="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <a href="#" class="overflow-hidden rounded">
+                            <img class="mx-auto h-44 w-44 dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg"
+                                alt="imac image" />
+                            <img class="mx-auto hidden h-44 w-44 dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg"
+                                alt="imac image" />
+                        </a>
+                        <div>
+                            <a href="#"
+                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Apple
+                                Watch Series 8</a>
+                            <p class="mt-2 text-base font-normal text-gray-500 dark:text-gray-400">This generation has
+                                some
+                                improvements, including a longer continuous battery life.</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white">
+                                <span class="line-through"> $1799,99 </span>
+                            </p>
+                            <p class="text-lg font-bold leading-tight text-red-600 dark:text-red-500">$1199</p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2.5">
+                            <button data-tooltip-target="favourites-tooltip-3" type="button"
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+                                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="favourites-tooltip-3" role="tooltip"
+                                class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                                Add to favourites
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <button type="button"
+                                class="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium  text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-700">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+
+
+        </div>
+    </div>
+
+
+    <!-- بخش اصلی -->
+    <div class="px-9 py-6 bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
+        <div
+            class="grid grid-cols-12 gap-6 bg-white dark:bg-gray-800 rounded shadow-sm dark:shadow-none dark:border dark:border-slate-700 p-4">
+            <div
+                class="col-span-3 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                        alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                            technology acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                        technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-span-9 grid grid-cols-3 gap-2 p-2 w-full border border-gray-600 rounded-lg shadow-sm">
+                
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg" src="https://flowbite.com/docs/images/products/apple-watch.png"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                                    Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg" src="https://flowbite.com/docs/images/products/apple-watch.png"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                                    Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg" src="https://flowbite.com/docs/images/products/apple-watch.png"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                                    Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    {{--  footer  --}}
+    <div class=" dark:bg-gray-900 relative z-20  pt-2">
+        <footer class="bg-white shadow-sm dark:bg-gray-800 p-2">
+            <div class="w-full max-w-screen-xl mx-auto py-4 ">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <a href="https://flowbite.com/"
+                        class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                    </a>
+                    <ul
+                        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                        <li>
+                            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                        href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights
+                    Reserved.</span>
+            </div>
+        </footer>
+    </div>
+    {{--  footer end  --}}
+
 </div>
 
 
